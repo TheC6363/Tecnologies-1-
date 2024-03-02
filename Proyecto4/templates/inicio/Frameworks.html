@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Frameworks</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Frameworks
+{% endblock h1_header %}
+
+
+{% block main %}
+
+<a href={% url "CreacionFrameworks" %}> Crear nuevo Framework</a>
+
+<form action="">
+    <strong>Nombre:</strong>
+    <input type="text" name='nombre'>
+    <input type="submit" value="Buscar">
+</form>
+
+<ul>
+{% if frameworks %}
+    {% for framework in frameworks %}
+    <li><strong>Nombre =</strong> {{framework}} <a href={% url "ActualizarFramework" framework.id %}>Actualizar</a> || <a href={% url "eliminarFramework" framework.id %}>Eliminar</a>||
+    <a href={% url "DetalleFramework" framework.id%}>Ver mas...</a></li> 
+    {% endfor %} 
+
+</ul>
+{% else %}
+<p>No se encontraron Frameworks</p>
+{% endif %}
+
+{% endblock main %}

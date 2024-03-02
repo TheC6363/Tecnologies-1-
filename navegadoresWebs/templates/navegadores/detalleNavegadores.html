@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Navegadores {{navegador.id}}</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Navegadore {{navegador.nombre}}
+{% endblock h1_header %}
+
+
+{% block main %}
+
+<ul>
+    <li>Nombre: {{navegador.nombre}}</li>
+    <li>Version: {{navegador.version}}</li>
+    <li>Fecha creacion: {{navegador.fecha_creacion}}</li>
+</ul>
+
+{% endblock main %}

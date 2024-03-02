@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Actualizar Language</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Actualizar Language
+{% endblock h1_header %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>{{formulario}}</table>
+    <input type="submit" value="Actualizar">
+    </form>
+{% endblock main %}

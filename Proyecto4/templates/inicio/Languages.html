@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Languages</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Languages
+{% endblock h1_header %}
+
+
+{% block main %}
+
+<a href={% url "CreacionLanguages" %}> Crear nuevo Languages</a>
+
+<form action="">
+   <strong>{{busqueda}}</strong> 
+    <input type="submit" value="Buscar">
+</form>
+
+<ul>
+{% if languages %}
+    {% for language in languages %}
+    <li><strong>Nombre =</strong>{{language}} <a href={% url "ActualizarLanguage" language.id %}>Actualizar</a> | <a href={% url "eliminarLanguage" language.id %}>Eliminar</a>| <a href={% url "DetalleLanguage" language.id%}>Ver mas...</a></li> 
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron Lenguages</p>
+{% endif %}
+
+{% endblock main %}

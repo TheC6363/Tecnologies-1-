@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Detalle {{language.id}}</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Detalle {{language.nombre}}
+{% endblock h1_header %}
+
+
+{% block main %}
+
+<ul>
+    <li>Nombre: {{language.nombre}}</li>
+    <li>Creador: {{language.creador}}</li>
+    <li>Version: {{language.version}}</li>
+    <li>Descripcion: {{language.descripcion}}</li>
+</ul>
+
+{% endblock main %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Eliminar Navegador</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Eliminar??
+{% endblock h1_header %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+    Queres eliminar el navegador {{navegador.nombre}} ??
+    <input type="submit" value="Confirmar">
+    </form>
+{% endblock main %}

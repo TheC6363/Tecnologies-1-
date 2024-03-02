@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Crear Navegador</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Crear Navegadores
+{% endblock h1_header %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+   <table>{{form}}</table> 
+    <input type="submit" value="Crear">
+    </form>
+{% endblock main %}

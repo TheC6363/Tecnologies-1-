@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title_header %} 
+<title>Crear Framework</title>
+{% endblock title_header %}
+
+{% block h1_header %}
+Crear Framework
+{% endblock h1_header %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>{{formularioFf}}</table>
+    <input type="submit" value="Crear">
+    </form>
+{% endblock main %}
